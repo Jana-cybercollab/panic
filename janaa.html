@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batman PATTAM Yaarukuuu?</title>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+*{
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+body{
+    margin:0;
+    background:#0f0f0f;
+    color:#fff;
+    text-align:center;
+}
+header{
+    background:#000;
+    padding:25px;
+}
+header img{
+    width:260px;
+    border-radius:12px;
+    box-shadow:0 0 20px #f5c518;
+}
+.container{
+    max-width:900px;
+    margin:20px auto;
+    padding:20px;
+}
+.btn{
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    font-size:1.05em;
+    background:#f5c518;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+.btn:hover{
+    background:#ffdd57;
+}
+.box{
+    display:none;
+    background:#1b1b1b;
+    padding:18px;
+    border-radius:10px;
+    margin-bottom:15px;
+    box-shadow:0 0 15px rgba(0,0,0,0.6);
+}
+ul{
+    list-style:none;
+    padding:0;
+}
+li{
+    margin:8px 0;
+}
+.signal img,
+.signal video{
+    width:220px;
+    border-radius:10px;
+    margin:10px;
+}
+.secret{
+    border:2px dashed #f5c518;
+    font-size:1.2em;
+    box-shadow:0 0 20px #f5c518;
+}
+footer{
+    margin:20px;
+    font-size:0.9em;
+    opacity:0.6;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🦇 BATMAN PATTAMALIPU VIZHA 🦇</h1>
+<p>END the controversy — WHO IS THE NEXT BATMAN?</p>
+<img src="Bat1.jpg" alt="Batman">
+</header>
+
+<div class="container">
+
+<!-- ABOUT -->
+<button class="btn toggle" data-target="#about">ABOUT THE EVENT</button>
+<div id="about" class="box">
+    Ungalai Naangal <strong>Vavvaal Sangathin Saarbaga</strong> Nadaiperum  
+    <strong>“Batman Pattamalipu Vizha”</strong>-vukku  
+    Anbodum, Panbodum Varuga Varuga Enru Varaverkinrom!<br><br>
+
+    Indha Nigaichchi <strong>“Batman Yaar?”</strong> endra  
+    Periya Kelvikku Oru <strong>Fun + Fantasy + Fan Celebration</strong>-aaga Amaindhadhu.  
+    Superhero Dance, Games, Surprises matrum  
+    Iconic <strong>Bat-Signal Moment</strong> moolam  
+    Ellorukkum Oru Marakka Mudiyadha Anubavam!
+</div>
+
+<!-- DETAILS -->
+<button class="btn toggle" data-target="#details">EVENT DETAILS</button>
+<div id="details" class="box">
+<ul>
+<li>📅 DATE: 13.12.2026</li>
+<li>⏰ TIME: 01:00 AM</li>
+<li>📍 LOCATION: BURJ KHALIFA, GOTHAM CITY</li>
+</ul>
+</div>
+
+<!-- ACTIVITIES -->
+<button class="btn toggle" data-target="#activities">ACTIVITIES</button>
+<div id="activities" class="box">
+<ul>
+<li>🦇 Batman Mask Art Competition</li>
+<li>🌙 Night Party</li>
+<li>💃 Wednesday Addams Dance</li>
+<li>🦾 Iron Man Speech</li>
+<li>🕺 Superman & Wonder Woman Dance</li>
+<li>🍺 Beer Party (Non-Alcoholic)</li>
+<li>💪 Arm Wrestling with Hulk Bruce</li>
+<li>🌊 Aquaman Fish Show</li>
+<li>⚡ Running Race with Flash</li>
+</ul>
+</div>
+
+<!-- BAT SIGNAL -->
+<button class="btn toggle" data-target="#signal">BAT-SIGNAL STATUS</button>
+<div id="signal" class="box signal">
+<img id="signalImg" src="off.jpg">
+<video id="signalVideo" loop muted style="display:none;">
+<source src="on.mp4" type="video/mp4">
+</video><br>
+<button class="btn" onclick="signalOn()">ON Signal</button>
+<button class="btn" onclick="signalOff()">OFF Signal</button>
+</div>
+
+<!-- APPLY -->
+<button class="btn toggle" data-target="#apply">HOW TO APPLY</button>
+<div id="apply" class="box">
+<ul>
+<li>📧 thebatman@gmail.com</li>
+<li>🌐 ogbatman.com</li>
+<li>📧 yaarubatmanevent@gmail.com</li>
+<li>📞 044-76546</li>
+</ul>
+</div>
+
+<!-- SECRET -->
+<button class="btn" id="revealSecret">🔐 REVEAL SECRET</button>
+<div id="secretBox" class="box secret">
+🦇 THE NEXT BATMAN IS <strong>Janaaa Enginra JK</strong> 🦇
+</div>
+
+</div>
+
+<footer>
+© 2026 Vavvaal Sangam | Gotham City
+</footer>
+
+<script>
+$(".toggle").click(function(){
+    $($(this).data("target")).slideToggle(500);
+});
+
+function signalOn(){
+    $("#signalImg").hide();
+    $("#signalVideo").show()[0].play();
+}
+function signalOff(){
+    const v = $("#signalVideo")[0];
+    v.pause();
+    v.currentTime = 0;
+    $("#signalVideo").hide();
+    $("#signalImg").show();
+}
+
+$("#revealSecret").click(function(){
+    $("#secretBox").fadeToggle(800);
+});
+</script>
+
+</body>
+</html>
